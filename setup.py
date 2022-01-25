@@ -37,5 +37,5 @@ setup(
             'html-pretify = lektor_html_pretify:HtmlPretifyPlugin',
         ]
     },
-    install_requires=['chardet']
+    install_requires=['chardet', 'bs4']
 )
