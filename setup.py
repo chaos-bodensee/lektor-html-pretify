@@ -26,8 +26,8 @@ setup(
     name='lektor-html-pretify',
     packages=find_packages(),
     py_modules=['lektor_html_pretify'],
-    url='[https://github.com/chaos-bodensee/lektor-html-pretify]',
-    version='1.0.3',
+    url=['https://github.com/chaos-bodensee/lektor-html-pretify'],
+    version='1.0.4',
     classifiers=[
         'Framework :: Lektor',
         'Environment :: Plugins',
