@@ -27,7 +27,7 @@ setup(
     packages=find_packages(),
     py_modules=['lektor_html_pretify'],
     # url='[link to your repository]',
-    version='0.1',
+    version='1.0.0',
     classifiers=[
         'Framework :: Lektor',
         'Environment :: Plugins',

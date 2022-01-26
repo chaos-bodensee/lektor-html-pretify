@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# general Lektor plugins
-from lektor.pluginsystem import Plugin
-from lektor.reporter import reporter
 
 # find and open html files
 import os
 
 # pretify file
-import chardet
 import codecs
+import chardet
 from bs4 import BeautifulSoup
-# from html5print import HTMLBeautifier
+
+# general Lektor plugins
+from lektor.pluginsystem import Plugin
+from lektor.reporter import reporter
 
 class HtmlPretifyPlugin(Plugin):
     name = 'html-pretify'
@@ -42,7 +42,7 @@ class HtmlPretifyPlugin(Plugin):
             f.write( result.prettify(formatter="html") )
             f.truncate()
 
-    def on_after_build_all(self, builder, **extra):
+    def on_after_build_all(self, builder):
         """
         after-build-all lektor event
         """
