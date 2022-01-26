@@ -15,7 +15,7 @@ from lektor.reporter import reporter
 
 class HtmlPretifyPlugin(Plugin):
     name = 'html-pretify'
-    description = u'Lektor Plugin to pretify your HTML Dome'
+    description = u'Lektor Plugin to pretify your HTML DOM using BeautifulSoup'
 
     def is_enabled(self, build_flags):
         return bool(build_flags.get('pretifyhtml'))
@@ -42,7 +42,7 @@ class HtmlPretifyPlugin(Plugin):
             f.write( result.prettify(formatter="html") )
             f.truncate()
 
-    def on_after_build_all(self, builder):
+    def on_after_build_all(self, builder, **extra):
         """
         after-build-all lektor event
         """
