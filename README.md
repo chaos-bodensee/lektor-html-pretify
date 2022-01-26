@@ -5,11 +5,11 @@
  ![Upload Python Package](https://github.com/chaos-bodensee/lektor-html-pretify/workflows/Upload%20Python%20Package/badge.svg)
  ![Linting Python package](https://github.com/chaos-bodensee/lektor-html-pretify/workflows/Linting%20Python%20package/badge.svg)
 
-[Lektor](https://getlektor.com) plugin to pretify the HTML DOM using [Beautiful Soup](https://de.wikipedia.org/wiki/Beautiful_Soup).
+[Lektor](https://getlektor.com) plugin to pretify the HTML DOM using Beautiful Soup.
 
  How does it actually work?
 ----------------------------
- + It uses [Beautiful Soup](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser))
+ + It uses [Beautiful Soup](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)).
  + It looks for rendered ``.html`` files and pretify themi.
 
  Installation
@@ -22,7 +22,7 @@ lektor plugins add lektor-html-pretify
 Or by hand, adding the plugin to the packages section in your lektorproject file:
 ```ini
 [packages]
-lektor-html-pretify = 1.0.2
+lektor-html-pretify = 1.0.3
 ```
  Usage
 ------
