@@ -2,8 +2,9 @@
 ================
 [![PyPI version](https://badge.fury.io/py/lektor-html-pretify.svg)](https://badge.fury.io/py/lektor-html-pretify)
  [![Downloads](https://pepy.tech/badge/lektor-html-pretify)](https://pepy.tech/project/lektor-html-pretify)
- ![Upload Python Package](https://github.com/chaos-bodensee/lektor-html-pretify/workflows/Upload%20Python%20Package/badge.svg)
- ![Linting Python package](https://github.com/chaos-bodensee/lektor-html-pretify/workflows/Linting%20Python%20package/badge.svg)
+ [![Linting Python package](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpackage.yml/badge.svg)](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpackage.yml)
+ [![Upload Python Package](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpublish.yml/badge.svg)](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpublish.yml)
+ [![Yamllint GitHub Actions](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/yamllint.yaml/badge.svg)](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/yamllint.yaml)
 
 [Lektor](https://getlektor.com) plugin to pretify the HTML DOM using Beautiful Soup.
 
