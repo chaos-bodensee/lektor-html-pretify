@@ -23,7 +23,7 @@ lektor plugins add lektor-html-pretify
 Or by hand, adding the plugin to the packages section in your lektorproject file:
 ```ini
 [packages]
-lektor-html-pretify = 1.0.5
+lektor-html-pretify = 1.0.6
 ```
  Usage
 ------
@@ -54,4 +54,3 @@ To test and/or develop on this plugin in your running lektor installation, simpl
 <!-- How to add to pypi: https://packaging.python.org/tutorials/packaging-projects/ -->
 <!-- Python RELEASEING moved to github action -->
 <!-- You have to edit the version number in README and setup.py manually -->
-

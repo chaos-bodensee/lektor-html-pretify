@@ -27,7 +27,7 @@ setup(
     packages=find_packages(),
     py_modules=['lektor_html_pretify'],
     url='https://github.com/chaos-bodensee/lektor-html-pretify',
-    version='1.0.5',
+    version='1.0.6',
     classifiers=[
         'Framework :: Lektor',
         'Environment :: Plugins',
@@ -37,5 +37,5 @@ setup(
             'html-pretify = lektor_html_pretify:HtmlPretifyPlugin',
         ]
     },
-    install_requires=['chardet', 'bs4']
+    install_requires=['bs4']
 )
