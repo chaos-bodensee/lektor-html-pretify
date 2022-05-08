@@ -3,7 +3,6 @@
 [![PyPI version](https://badge.fury.io/py/lektor-html-pretify.svg)](https://badge.fury.io/py/lektor-html-pretify)
  [![Downloads](https://pepy.tech/badge/lektor-html-pretify)](https://pepy.tech/project/lektor-html-pretify)
  [![Linting Python package](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpackage.yml/badge.svg)](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpackage.yml)
- [![Upload Python Package](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpublish.yml/badge.svg)](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/pythonpublish.yml)
  [![Yamllint GitHub Actions](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/yamllint.yaml/badge.svg)](https://github.com/chaos-bodensee/lektor-html-pretify/actions/workflows/yamllint.yaml)
 
 [Lektor](https://getlektor.com) plugin to pretify the HTML DOM using Beautiful Soup.
@@ -11,7 +10,7 @@
  How does it actually work?
 ----------------------------
  + It uses [Beautiful Soup](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)).
- + It looks for rendered ``.html`` files and pretify themi.
+ + It looks for rendered ``.html`` files and pipe it through Beautiful Soup.
 
  Installation
 -------------
