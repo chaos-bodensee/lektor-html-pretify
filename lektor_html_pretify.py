@@ -6,7 +6,6 @@ import os
 
 # pretify file
 import codecs
-import chardet
 from bs4 import BeautifulSoup
 
 # general Lektor plugins
@@ -15,7 +14,7 @@ from lektor.reporter import reporter
 
 class HtmlPretifyPlugin(Plugin):
     name = 'html-pretify'
-    description = u'Lektor Plugin to pretify your HTML DOM using BeautifulSoup'
+    description = 'Lektor Plugin to pretify your HTML DOM using BeautifulSoup'
 
     def is_enabled(self, build_flags):
         return bool(build_flags.get('pretifyhtml'))
@@ -24,24 +23,25 @@ class HtmlPretifyPlugin(Plugin):
         """
         Finds all html files in the given destination.
         """
-        for root, dirs, files in os.walk(destination):
-            for f in files:
-                if f.endswith('.html'):
-                    yield os.path.join(root, f)
+        # pylint: disable=unused-variable
+        for root, direcorys, files in os.walk(destination):
+            for file in files:
+                if file.endswith('.html'):
+                    yield os.path.join(root, file)
 
     def pretify_file(self, target):
         """
         Minifies the target html file.
         """
-        html = open(target, 'rb')
-        enc = chardet.detect(html.read())['encoding']
-        html.close()
-        with codecs.open(target, 'r+', enc) as f:
-            result = BeautifulSoup(f.read(), 'html.parser')
-            f.seek(0)
-            f.write( result.prettify(formatter="html") )
-            f.truncate()
+        with open(target, 'rb') as html:
+            with codecs.open(target, 'r+') as file:
+                result = BeautifulSoup(file.read(), 'html.parser')
+                file.seek(0)
+                file.write( result.prettify(formatter="html") )
+                file.truncate()
+            html.close()
 
+        # pylint: disable=unused-argument
     def on_after_build_all(self, builder, **extra):
         """
         after-build-all lektor event
