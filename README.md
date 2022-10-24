@@ -22,7 +22,7 @@ lektor plugins add lektor-html-pretify
 Or by hand, adding the plugin to the packages section in your lektorproject file:
 ```ini
 [packages]
-lektor-html-pretify = 1.0.6
+lektor-html-pretify = 1.0.7
 ```
  Usage
 ------
