@@ -10,7 +10,7 @@
  How does it actually work?
 ----------------------------
  + It uses [Beautiful Soup](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)).
- + It looks for rendered ``.html`` files and pipe it through Beautiful Soup.
+ + It looks for rendered ``.html`` files and pipe it through Beautiful Soup, after opening the files via [codecs](https://docs.python.org/3/library/codecs.html).
 
  Installation
 -------------
@@ -22,7 +22,7 @@ lektor plugins add lektor-html-pretify
 Or by hand, adding the plugin to the packages section in your lektorproject file:
 ```ini
 [packages]
-lektor-html-pretify = 1.0.6
+lektor-html-pretify = 1.0.7
 ```
  Usage
 ------

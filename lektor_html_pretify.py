@@ -34,7 +34,7 @@ class HtmlPretifyPlugin(Plugin):
         Minifies the target html file.
         """
         with open(target, 'rb') as html:
-            with codecs.open(target, 'r+') as file:
+            with codecs.open(target, 'r+', errors='xmlcharrefreplace') as file:
                 result = BeautifulSoup(file.read(), 'html.parser')
                 file.seek(0)
                 file.write( result.prettify(formatter="html") )
