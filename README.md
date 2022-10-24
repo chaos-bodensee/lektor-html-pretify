@@ -10,7 +10,7 @@
  How does it actually work?
 ----------------------------
  + It uses [Beautiful Soup](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)).
- + It looks for rendered ``.html`` files and pipe it through Beautiful Soup.
+ + It looks for rendered ``.html`` files and pipe it through Beautiful Soup, after opening the files via [codecs](https://docs.python.org/3/library/codecs.html).
 
  Installation
 -------------
