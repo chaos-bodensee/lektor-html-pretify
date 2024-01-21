@@ -16,9 +16,6 @@ class HtmlPretifyPlugin(Plugin):
     name = 'html-pretify'
     description = 'Lektor Plugin to pretify your HTML DOM using BeautifulSoup'
 
-    def is_enabled(self, build_flags):
-        return bool(build_flags.get('pretifyhtml'))
-
     def find_html_files(self, destination):
         """
         Finds all html files in the given destination.
@@ -46,14 +43,6 @@ class HtmlPretifyPlugin(Plugin):
         """
         after-build-all lektor event
         """
-        try:
-            is_enabled = self.is_enabled(builder.build_flags)
-        except AttributeError:
-            is_enabled = self.is_enabled(builder.extra_flags)
-
-        if not is_enabled:
-            return
-
         reporter.report_generic('HTML minification started')
         for htmlfile in self.find_html_files(builder.destination_path):
             self.pretify_file(htmlfile)
