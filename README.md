@@ -22,18 +22,7 @@ lektor plugins add lektor-html-pretify
 Or by hand, adding the plugin to the packages section in your lektorproject file:
 ```ini
 [packages]
-lektor-html-pretify = 1.0.7
-```
- Usage
-------
-To enable the plugin, pass the ``pretifyhtml`` flag when starting the development
-server or when running a build:
-```bash
-# build and compile css from scss
-lektor build -f pretifyhtml
-
-# edit site with new generated css
-lektor server -f pretifyhtml
+lektor-html-pretify = 2.0.0
 ```
 
  Python3
@@ -42,8 +31,8 @@ It is highly recommended to use this plugin with a python3 version of lektor.
 
 Since lektor can be used as a python module it is possible to enforce this *(after lektor is installed eg. with ``pip3 install --user --upgrade lektor``)* with the following command:
 ```bash
-# run a python3 lektor server with new generated css
-python3 -m lektor server -f pretifyhtml
+# run a python3 lektor server
+python3 -m lektor server
 ```
 
  Development
