@@ -1,22 +1,22 @@
 ---
-name: 'Yamllint GitHub Actions'
+name: Yamllint check
 
 # yamllint disable-line rule:truthy
 on: [push, pull_request]
 
 jobs:
-  yamllint:
-    name: 'Yamllint'
+  build:
+    name: Yamllint
     runs-on: ubuntu-latest
+
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Yamllint'
-        uses: karancode/yamllint-github-action@master
+      - name: Checkout git repo
+        uses: actions/checkout@v4
         with:
-          yamllint_file_or_dir: '.'
-          yamllint_config_filepath: './.yamllint'
-          yamllint_strict: false
-          yamllint_comment: true
-#       env:
-#         GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }
+          submodules: true
+          fetch-depth: 0
+
+      - name: Run yamllint
+        uses: ansible-actions/yamllint-action@v0.0.1
+        with:
+          target: "./"
